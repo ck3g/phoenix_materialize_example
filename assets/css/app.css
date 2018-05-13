@@ -1,1 +1,5 @@
 /* This file is for your main application css. */
+
+.tab-content {
+  padding-top: 20px !important;
+}

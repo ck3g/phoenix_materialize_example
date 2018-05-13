@@ -4,32 +4,31 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Phoenix materialize design example">
+    <meta name="keywords" content="Phoenix, Materialize Design, Materialize css, WhatDidILearn">
+    <meta name="author" content="@ck3g">
 
-    <title>Hello PhoenixMaterializeExample!</title>
+    <title>Phoenix Materialize Example!</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
   <body>
+    <nav class="orange darken-4">
+      <div class="nav-wrapper container">
+        <a href="#" class="brand-logo">Materialize Example</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="http://whatdidilearn.info/2018/05/13/how-to-use-materialize-css-with-phoenix.html">Read article</a></li>
+          <li><a href="https://materializecss.com/getting-started.html">Materialize CSS</a></li>
+        </ul>
+      </div>
+    </nav>
+
     <div class="container">
-      <header class="header">
-        <nav role="navigation">
-          <ul class="nav nav-pills pull-right">
-            <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
-          </ul>
-        </nav>
-        <span class="logo"></span>
-      </header>
-
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-
-      <main role="main">
+      <div class="section">
         <%= render @view_module, @view_template, assigns %>
-      </main>
+      </div>
+    </div>
 
-    </div> <!-- /container -->
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>
